@@ -115,6 +115,7 @@ p:hover {
 
 .button {
   margin-left: 20px;
+ 
 }
 
 .text-one-about {
@@ -321,12 +322,11 @@ margin-top: 20px;
   background: #6366F1;
 }
 
-
 .blog-items{
   display: flex;
   flex-direction: row;
   align-items: center;
-}
+} 
 
 .renglonuno{
 text-align: justify;
@@ -477,69 +477,69 @@ margin-top: 30px;
 
 /* responsive design -------------------------------------------------------------------------------*/
 
-@media only screen and (min-width: 400px) {
 
-/* 
+@media  (max-width: 500px)  {
+    /* body{background: orange;} */
+
+
   .text-two-about {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    width: 400px;
-  }
-  .button {
-    margin-top: 35px;
-  }
-  .text-two-about strong{
-    margin: 0 5px ;
   }
 
-  .boxespage{
-    margin-top: 20px;
-    height: 190px;
+  .button {
+    margin-top: 50px;
   }
+
+  /* componente 4 */
+  .line-four {
+    background: transparent;
+  }
+
 
   .blog-items{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 150px;
-  } */
+  }
 
-  /* .renglondos{
+  .renglonuno{
+    margin-top: 50px;
+  }
+
+  .renglondos{
     margin-top: 150px;
-    margin-left: 0;
+    margin-left: 0px;
+  }
+/* 
+component 6 */
+
+
+.text-skill{
+  align-items: center;
   }
 
-  .text-one-skills{
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .skills-section{
-    width: 450px;
-  }
+.text-one-skills{
+  margin-top: 20px;
+  width: 70%;
+}
 
-  .contact{
-    width: 400px;
-    background: yellow;
-    height: 200px;
 
-  }
-  .touchfooter{
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .base-contact{
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
-    align-items: stretch;
-  }
-  
-  .central-footer{
-    background: greenyellow;
-  } */
+/* component 7 */
+
+.base-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.touchfooter{
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+}
+
 
 
 

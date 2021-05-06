@@ -1,5 +1,10 @@
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
+// import ThemeSwitcher from "./ThemeSwitcher";
+// import * as themes from "./styles/themes";
+// import ThemesContext from "./styles/themes/context";
+// import themeProvider from "./stylecomponents";
+// import ThemeContext, { themes } from "./theme-context";
 
 // mi primer componente
 const Header = () => {
@@ -11,7 +16,7 @@ const Header = () => {
         </p>
       </div>
       <div className="bar">
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
       </div>
     </div>
   );
@@ -34,7 +39,7 @@ const Photoblog = () => {
         <div className="line"></div>
         <div className="scroll-about">
           <p>
-            <i class="fas fa-arrow-down"></i>Scroll down
+            <i className="fas fa-arrow-down"></i>Scroll down
           </p>
         </div>
       </div>
@@ -54,7 +59,7 @@ const About = () => {
         <div className="about-skills">
           <p>
             I´m currently working as a freelance
-            <strong>fullstack developer</strong>
+            <strong> fullstack developer </strong>
             and UI/UX designer. I enjoy building web apps using
             <input
               className="botomabout"
@@ -100,7 +105,7 @@ const Box = () => {
             loridarmas.store
           </p>
           <div className="info-box">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             <a href="#">Details</a>
           </div>
         </div>
@@ -108,7 +113,7 @@ const Box = () => {
           <h3>Portfolio UX Design</h3>
           <p>Design System, prototypes, UX Research for a new venture</p>
           <div className="info-box">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             <a href="#">Details</a>
           </div>
         </div>
@@ -118,7 +123,7 @@ const Box = () => {
             Simple page with python and some animation for learn Git and Github
           </p>
           <div className="info-box">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             <a href="#">Details</a>
           </div>
         </div>
@@ -128,7 +133,7 @@ const Box = () => {
             Lodgement management application. Developed react, NodeJS + MongoDB
           </p>
           <div className="info-box-only">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             <a href="#">Details</a>
           </div>
         </div>
@@ -136,7 +141,7 @@ const Box = () => {
           <h3>Tutorial Flutter</h3>
           <p>Practices in Flutter</p>
           <div className="info-box-onlytwo">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             <a href="#">Details</a>
           </div>
         </div>
@@ -144,7 +149,7 @@ const Box = () => {
           <h3>UX Study Cases </h3>
           <p>Some of the cases that i`ve research in UX Design</p>
           <div className="info-box-onlythree">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
             <a href="#">Details</a>
           </div>
         </div>
@@ -223,28 +228,28 @@ const Skills = () => {
         <div className="line-skill"></div>
       </div>
 
-      <div class="text-skill">
+      <div className="text-skill">
         <div className="text-one-skills">
           <p>
-            I`ve spent about two years on improving my skills in website
+            I`ve spent about one year on improving my skills in website
             development using
           </p>
           <p>
-            <input class="bottomskills" type="bottom" value="PHP" /> and
-            <input class="bottomskills" type="bottom" value="Javascript" />
+            <input className="bottomskills" type="bottom" value="PHP" /> and
+            <input className="bottomskills" type="bottom" value="Javascript" />
             that i`m now pretty confident in building apps using these tools:
             <br></br>
           </p>
         </div>
 
         <div className="icon-skills">
-          <div class="logoskill">
+          <div className="logoskill">
             <img src="img/1.png" alt="" />
             <img src="img/2.png" alt="" />
             <img src="img/3.png" alt="" />
           </div>
 
-          <div class="logoskilldos">
+          <div className="logoskilldos">
             <img src="img/4.png" alt="" />
             <img src="img/5.png" alt="" />
             <img src="img/6.png" alt="" />
@@ -256,7 +261,7 @@ const Skills = () => {
   );
 };
 
-// Componente 3
+// Componente 7
 const Network = () => {
   return (
     <div className="contact">
@@ -266,20 +271,20 @@ const Network = () => {
         </div>
         <div className="base-contact">
           <h2>loridarmas@gmail.com</h2>
-          <div class="vectoredes">
+          <div className="vectoredes">
             <div className="icon-one">
               <a href="https://www.facebook.com/Laura-V-De-Armas-108542417514141">
-                <i class="fab fa-facebook-f"></i>
+                <i className="fab fa-facebook-f"></i>
               </a>
             </div>
             <div className="icon-one">
               <a href="https://twitter.com/lauravdearmas">
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
               </a>
             </div>
             <div className="icon-one">
               <a href="https://github.com/Lauravdearmas">
-                <i class="fab fa-github"></i>
+                <i className="fab fa-github"></i>
               </a>
             </div>
           </div>
@@ -292,11 +297,11 @@ const Network = () => {
 const App = () => {
   return (
     <div id="main" className="container">
-      <Header />
+      {/* <Header /> */}
       <Photoblog />
       <About />
-      <Box />
-      <Blog />
+      {/* <Box /> */}
+      {/* <Blog /> */}
       <Skills />
       <Network />
     </div>
