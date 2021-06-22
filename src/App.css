@@ -1,7 +1,72 @@
 .container {
   font-family: 'Roboto', sans-serif;
-  
+  background: rgb(49, 49, 49);
+  color: white;
 }
+
+.container-dark {
+  font-family: 'Roboto', sans-serif;
+  background: white;
+  color: rgb(41, 41, 41);
+}
+
+.checkbox{
+  display: none;
+}
+
+.checkbox:checked ~ .switch:before{
+  transform: translateX(0);
+}
+
+.switch{
+  margin-left: 10px;
+  margin-right: 50px;
+  height: 40px;
+  display: block;
+  border-radius: 20px;
+  background: rgb(37, 194, 233);
+  width: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.switch::before{
+ content: "";
+ display: block;
+ border-radius: 50%;
+ background: white;
+ width: 30px;
+ height: 30px;
+ transform: translateX(40px);
+ transition: .3s;
+ will-change: transform;
+}
+
+.dark-mode{
+  display: flex;
+  align-items: center;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cardGray: #252b43;
+    --baseBackground: #1d2029;
+    --baseColor: white;
+    --gray: #8088ad;
+    --lightGray: #1d2029;
+    --cardTitle: #8088ad;
+    --switchSpinner: #282943;
+    --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+  }
+}
+
+
+
+
 
 .navigation {
   padding: 0;
@@ -73,7 +138,7 @@ p:hover {
   margin-left: 20px;
   font-weight: bold;
   font-size: 26px;
-  color: black;
+  
 }
 
 .line {
@@ -136,7 +201,7 @@ p:hover {
   font-size: 16px;
   font-weight: lighter;
   text-align: justify;
-  width: 60%;
+  width: 100%;
   line-height: 1.5;
 }
 
@@ -544,4 +609,34 @@ component 6 */
 
 
 
+}
+
+
+
+.is-dark-mode {
+  --cardGray: #252b43;
+  --baseBackground: #1d2029;
+  --baseColor: white;
+  --gray: #8088ad;
+  --lightGray: #1d2029;
+  --cardTitle: #8088ad;
+  --switchSpinner: #282943;
+  --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+}
+
+.is-light-mode {
+  --gray: #5f616d;
+  --cardGray: #f0f3fa;
+  --lightGray: #f8f9fe;
+  --cardTitle: #6f717e;
+  --baseBackground: white;
+  --baseColor: #1d2029;
+  --switchSpinner: white;
+  --switch: #5f616d;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(49, 49, 49);
+  color: white;
 }
