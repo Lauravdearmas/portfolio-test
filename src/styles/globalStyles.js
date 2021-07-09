@@ -2,8 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+     background: ${({ theme }) => theme.body}; 
+    color: ${({ theme }) => theme.text}; 
+    
+    ${"" /* background:url('img/two.png') center center no-repeat; */}
     font-family: 'Roboto', sans-serif;
     transition: all .5s linear;
   }
@@ -24,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .about-text {
  
-  margin: 200px 0px;
+  margin: 50px 0px;
   font-size: 16px;
   font-weight: lighter;
   text-align: justify;
@@ -79,15 +81,136 @@ export const GlobalStyles = createGlobalStyle`
 
 .skills-section{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 300px 0px;
+  justify-content: center;
+  flex-direction: column;
+  width:800px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
+  border-radius: 12px;
+  padding: 50px 100px;
+  margin-top: 100px;
+  margin-left: -180px;
+}
+
+.svg-skills {
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+.svg-skills circle{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-Linecap: round;
+  transform: translate(5px, 5px)
+}
+
+.svg-skills circle:nth-child(2){
+  
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  
+}
+.box-skills:nth-child(1) .svg-skills circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*70) / 100);
+  stroke: #00ff43;
+  
+}
+
+.box-skills:nth-child(4) .svg-skills circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*70) / 100);
+  stroke: #1ECBF1;
+  
+}
+
+.box-skills:nth-child(3) .svg-skills circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*50) / 100);
+  stroke: #F8F036;
+  
+}
+.box-skills:nth-child(2) .svg-skills circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*80) / 100);
+  stroke: #6200ee;
+  
+}
+
+.skills-animation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+}
+
+.box-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-left: 20px;
+  padding: 20px;
+  
+}
+
+.box-skills:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+  
+}
+
+
+
+
+.percent-skills{
+  
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 25px #000;
+  z-index: 1000;
+}
+
+.percent-skills .number-skills{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.percent-skills .number-skills h2{
+  
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.text-skills {
+  
+  position: relative;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: uppercase;
 }
 
 .skills-title{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 800px;
   }
 
 .line-skill{
@@ -118,27 +241,6 @@ flex-direction: column;
 }
 
 
-.icon-skills{
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-}
-
-.logoskill img{
-margin-left: 30px;
-height: 70px;
-width: 70px;
-margin-top: 30px;
-}
-
-.logoskilldos img{
-  margin-left: 30px;
-  height: 70px;
-  width: 70px;
-  margin-top: 10px;
-}
-
 .bottomskills{
   width: 83px;
   height: 30px;
@@ -154,8 +256,25 @@ margin-top: 30px;
 
 
 .contact{
-  margin: 0 0 40px 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:800px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
+  border-radius: 12px;
+  padding: 50px 100px;
+  margin-top: 100px;
+  margin-left: -180px;
+  margin-bottom: 100px;
 }
+
+.central-footer{
+  width: 800px;
+}
+
 .touchfooter{
   display: flex;
   flex-direction: column;
@@ -196,36 +315,129 @@ margin-top: 30px;
 
 
 
+.infoInit{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 50px;
+  width: 800px
+  
+}
+
 .photo-banner {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px;
-  
+  flex-direction: column;
+  width:800px;
+  background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
+  border-radius: 12px;
+  padding: 50px 100px;
+  margin-left: -180px;
 }
 
 .photo-banner img { 
-  border-radius: 10%;
-  border: 4px solid #bb86fc;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
  
 }
 
+.img-portfolio-background{
+  margin-top: -2500px;
+margin-left: -400px;
+margin-right: 20px;
+
+}
+
+.img-two-portfolio-background{
+  position: relative;
+  width: 150px;
+  margin-top: -500px;
+  margin-left: 800px;
+  z-index:-1;
+
+}
+.img-three-portfolio-background{
+  position: absolute;
+  width: 130px;
+  margin-top: -750px;
+  z-index:-1;
+  margin-left: -250px;
+
+}
+
+.img-four-portfolio-background{
+  position: absolute;
+  width: 70px;
+  margin-top: -90px;
+  z-index:-1;
+  margin-left: -250px;
+
+}
+.img-five-portfolio-background{
+  position: absolute;
+  width: 70px;
+  margin-top: -1500px;
+  z-index:-1;
+  margin-left: -300px;
+
+}
+
+.img-six-portfolio-background{
+  position: absolute;
+  width: 300px;
+  margin-top: -1500px;
+  z-index:-1;
+  margin-left: 600px;
+
+}
+.img-seven-portfolio-background{
+  position: absolute;
+  width: 300px;
+  margin-top: -1400px;
+  z-index:-1;
+  margin-left: 600px;
+}
+
+.img-eigth-portfolio-background{
+  position: absolute;
+  width: 300px;
+  margin-top: -1100px;
+  z-index:-1;
+  margin-left: -300px;
+}
+
+.img-nine-portfolio-background{
+  position: absolute;
+  width: 50px;
+  margin-top: -200px;
+  z-index:-1;
+  margin-left: -300px;
+}
+
+.img-ten-portfolio-background{
+  position: absolute;
+  width: 70px;
+  margin-top: -650px;
+  margin-left: 780px;
+  z-index:-1;
+}
+
+
+
+
+
 .about {
-  margin-left: 20px;
+  margin-left: 50px;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.5;
 
 }
 
-.line {
-  background: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.body};
-  border-radius: 15%;
-  height: 10px;
-  width: 100%;
-  margin-top: -10px;
-} 
 
 .scroll-about {
   font-size: 16px;
@@ -238,96 +450,291 @@ margin-top: 30px;
 }
 
 
-@media  (max-width: 500px)  {
-  /* body{background: orange;} */
-
-  .about {
-  
-  font-size: 22px;
-  margin-top: 53px;
-  padding: 25px;
-
-  
-}
-
-.text-two-about {
+.skills-icon-portfolio{
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+  width:900px;
+  
 }
 
-.button {
-  margin-top: 50px;
-}
-
-/* componente 4 */
-.line-four {
-  background: transparent;
-}
-
-
-.blog-items{
+.item-portfolio{
   display: flex;
+  align-items: center;
+  ${"" /* justify-content: center; */}
   flex-direction: column;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%
+}
+.one{
+  background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.body};
+  padding: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
+}
+.two{
+  background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.body};
+  padding: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
+}
+.three{
+  background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.body};
+  padding: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
+}
+.four{
+  background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.body};
+  padding: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); 
 }
 
-.renglonuno{
+
+.pizza {
+  position: absolute;
+  width: 150px;
+  margin-top: -1100px;
+  margin-left: 520px;
+}
+
+.idea {
+  position: absolute;
+  margin-top: -400px;
+  margin-left: -120px; 
+}
+
+.exp {
+  position: absolute;
+  margin-top: -1550px;
+  margin-left: -150px; 
+  width: 150px;
+  height: 70px;
+}
+
+@media  (max-width: 375px)  {
+  /* body{background: orange;} */
+
+  .photo-banner {
+  flex-direction: column;
+  width:150px;
+  margin-left: -80px;
+}
+
+
+.infoInit{
+  flex-direction: column;
   margin-top: 50px;
-}
-
-.renglondos{
-  margin-top: 150px;
-  margin-left: 0px;
-}
-/* 
-component 6 */
-
-
-.text-skill{
-align-items: center;
-}
-
-.text-one-skills{
-margin-top: 20px;
-width: 100%;
-text-align: justify;
+  width: 350px
 }
 
 
-/* component 7 */
+.photo-banner img {
+  height: 250px;
+  width: 250px;
+}
+
+
+
+
+.skills-icon-portfolio{
+  flex-direction: column;
+  width:300px;
+}
+
+
+.about {
+  margin-top: 25px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.5;
+
+}
+
+${"" /* componente 2 */}
+
+
+.skills-section{
+  flex-direction: column;
+  width:150px;
+  margin-left: -80px;
+  margin-top: 100px;
+  
+}
+
+.svg-skills {
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+
+.skills-animation {
+  flex-direction: column;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.box-skills {
+  margin-bottom: 20px;
+}
+
+
+.skills-title{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+
+  ${"" /* componente 3 */}
+
+  .contact{
+  flex-direction: column;
+  width:150px;
+  margin-left: -80px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.central-footer{
+  width: 270px;
+  flex-direction: column;
+  margin-left: -15px;
+}
+
 
 .base-contact{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.touchfooter{
-display: flex;
-flex-direction: column;
-margin-left: -40px;
-}
-
 
 }
 
 
+@media  (max-width: 320px)  {
+  /* body{background: orange;} */
+
+  .photo-banner {
+  flex-direction: column;
+  width:100px;
+  margin-left: -80px;
+}
+
+
+.infoInit{
+  flex-direction: column;
+  margin-top: 50px;
+  width: 350px
+}
+
+
+.photo-banner img {
+  height: 250px;
+  width: 250px;
+}
 
 
 
 
+.skills-icon-portfolio{
+  flex-direction: column;
+  width:300px;
+}
 
 
+.about {
+  margin-top: 25px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.5;
+
+}
+
+${"" /* componente 2 */}
+
+
+.skills-section{
+  flex-direction: column;
+  width:100px;
+  margin-left: -80px;
+  margin-top: 100px;
+  
+}
+
+.svg-skills {
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+
+.skills-animation {
+  flex-direction: column;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.box-skills {
+  margin-bottom: 20px;
+}
+
+
+.skills-title{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+
+  ${"" /* componente 3 */}
+
+  .contact{
+  flex-direction: column;
+  width:100px;
+  margin-left: -100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.central-footer{
+  width: 270px;
+  flex-direction: column;
+  margin-left: -15px;
+}
+
+
+.base-contact{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+}
 
 
 
 `;
 
 export const lightTheme = {
-  body: "#fff",
+  body: "linear-gradient(to right, #ffdde1, #ee9ca7)",
   text: "#121212",
-  primary: "#6200ee",
+  primary: "#ee9ca7",
 };
 
 export const darkTheme = {

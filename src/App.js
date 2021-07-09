@@ -1,7 +1,9 @@
 import React from "react";
 import { Content } from "./components/Content";
 import { BodyPortfolio } from "./components/Portfolio";
-// import { AnimateElements } from "./components/animateelement";
+import { AnimateElements } from "./components/Pizza";
+import { AnimateIdeaElements } from "./components/idea";
+import { AnimateMatrazElements } from "./components/matraz";
 import { Toggle } from "./components/Toggle";
 import { useDarkMode } from "./styles/useDarkMode";
 import { GlobalStyles, lightTheme, darkTheme } from "./styles/globalStyles";
@@ -23,7 +25,10 @@ function App() {
         <Toggle theme={theme} toggleTheme={toggleTheme} />
         <Content />
         <BodyPortfolio />
-        {/* <AnimateElements /> */}
+        {/* <AnimateElements />
+
+        <AnimateIdeaElements /> */}
+        {/* <AnimateMatrazElements />  */}
       </Container>
     </ThemeProvider>
   );

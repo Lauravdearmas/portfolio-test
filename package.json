@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@svgr/cli": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "framer-motion": "^4.1.17",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -17,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "svg-to-jsx": "svgr < svgr/pizza.svg > src/components/Pizza.js --svgo-config svgr/svgo.json --replace-attr-values '#8582B3={props.color}'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
