@@ -6,7 +6,7 @@ const Photoblog = () => {
     <div className="photo-banner">
       <div className="infoInit">
         <div className="photo">
-          <img src="img/photo.png" alt="" />
+          <img src="img/photo.jpg" alt="" />
         </div>
         <div className="about">
           <p>
@@ -32,7 +32,7 @@ const Photoblog = () => {
               I´m currently working as a freelance
               <strong> fullstack developer </strong>
               and UI/UX designer. I enjoy building web apps using
-              Styled-Components and React. I`m also an active creator content in
+              Styled-Components and React. I`m also an active creator content on
               #vengaloilustro for entrepreneurs and tech students.
             </p>
           </div>
@@ -279,6 +279,13 @@ const Imgtenportfolio = () => {
     </div>
   );
 };
+const Imgsunportfolio = () => {
+  return <div className="sun"></div>;
+};
+
+const Imgcityportfolio = () => {
+  return <div className="city"></div>;
+};
 
 export const BodyPortfolio = () => {
   return (
@@ -295,6 +302,8 @@ export const BodyPortfolio = () => {
       <Imgeightportfolio />
       <Imgnineportfolio /> */}
       <Network />
+      <Imgsunportfolio />
+      <Imgcityportfolio />
       {/* <Imgportfolio /> */}
     </div>
   );

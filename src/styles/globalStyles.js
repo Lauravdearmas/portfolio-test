@@ -522,6 +522,67 @@ margin-right: 20px;
   height: 70px;
 }
 
+${"" /* animation */}
+${
+  "" /* 
+.sol{ 
+	background-image: url(img/sun.png);
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: -110px;
+	top: 30%;
+	border-radius: 100px;
+	box-shadow: 0px 0px 0px 10px rgba(255,140,0,0.5);
+	animation-name: sun;
+	animation-duration: 20s;
+	animation-iteration-count:infinite;
+} */
+}
+
+
+${
+  "" /* .city{
+	background-image: url(img/city.png);
+	background-repeat: repeat-x;
+	
+	position: absolute; 
+  left: 0px;
+	width: 100%;
+	height: 30%;	 
+  top: 1900px;
+	animation-name: city;
+  z-index:-1;
+	animation-duration: 30s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+} */
+}
+
+
+${
+  "" /* @keyframes sun{
+	0%{ left: -110px; top: 30%; }
+	50%{ left: 50%; top: 5%; background: #FF4500; } 
+	100%{ left: calc(100% + 10px); top: 30%; background: #bee2e6; box-shadow: 0px 0px 0px 10px rgba(73,92,95,0.5); }
+}
+
+
+@keyframes city{
+	from{ background-position: 0 100%; }
+	to{ background-position: 100% 100%; }
+}
+ */
+}
+
+
+
+
+
+
+
+
+
 @media  (max-width: 375px)  {
   /* body{background: orange;} */
 
