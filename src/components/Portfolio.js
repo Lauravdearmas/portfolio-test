@@ -48,7 +48,7 @@ const Photoblog = () => {
           <p className="title-item">Creativity</p>
         </div>
         <div className="item-portfolio">
-          <div className="three">🧩</div>
+          <div className="three">✌</div>
           <p className="title-item">Collaboration</p>
         </div>
         <div className="item-portfolio">
