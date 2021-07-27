@@ -588,7 +588,7 @@ ${
 
   .photo-banner {
   flex-direction: column;
-  width:150px;
+  width:140px;
   margin-left: -80px;
 }
 
@@ -628,7 +628,7 @@ ${"" /* componente 2 */}
 
 .skills-section{
   flex-direction: column;
-  width:150px;
+  width:140px;
   margin-left: -80px;
   margin-top: 100px;
   
@@ -649,6 +649,7 @@ ${"" /* componente 2 */}
 
 .box-skills {
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 
@@ -663,7 +664,7 @@ ${"" /* componente 2 */}
 
   .contact{
   flex-direction: column;
-  width:150px;
+  width:140px;
   margin-left: -80px;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -793,9 +794,9 @@ ${"" /* componente 2 */}
 `;
 
 export const lightTheme = {
-  body: "linear-gradient(to right, #ffdde1, #ee9ca7)",
+  body: "linear-gradient(to right, #cea6ff, #fbc7d4, #fbc7d4)",
   text: "#121212",
-  primary: "#ee9ca7",
+  primary: "#fbc7d4",
 };
 
 export const darkTheme = {
