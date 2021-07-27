@@ -173,138 +173,14 @@ const Network = () => {
   );
 };
 
-const Imgportfolio = () => {
-  return (
-    <div>
-      <img className="img-portfolio-background" src="img/idea.png" alt="" />
-    </div>
-  );
-};
-
-const Imgtwoportfolio = () => {
-  return (
-    <div>
-      <img className="img-two-portfolio-background" src="img/tree.png" alt="" />
-    </div>
-  );
-};
-
-const Imgthreeportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-three-portfolio-background"
-        src="img/cake.png"
-        alt=""
-      />
-    </div>
-  );
-};
-
-const Imgfourportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-four-portfolio-background"
-        src="img/check.png"
-        alt=""
-      />
-    </div>
-  );
-};
-
-const Imgfiveportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-five-portfolio-background"
-        src="img/brujula.png"
-        alt=""
-      />
-    </div>
-  );
-};
-const Imgsixportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-six-portfolio-background"
-        src="img/splash.png"
-        alt=""
-      />
-    </div>
-  );
-};
-
-const Imgsevenportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-seven-portfolio-background"
-        src="img/color.png"
-        alt=""
-      />
-    </div>
-  );
-};
-
-const Imgeightportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-eigth-portfolio-background"
-        src="img/color.png"
-        alt=""
-      />
-    </div>
-  );
-};
-
-const Imgnineportfolio = () => {
-  return (
-    <div>
-      <img
-        className="img-nine-portfolio-background"
-        src="img/flor.png"
-        alt=""
-      />
-    </div>
-  );
-};
-
-const Imgtenportfolio = () => {
-  return (
-    <div>
-      <img className="img-ten-portfolio-background" src="img/user.png" alt="" />
-    </div>
-  );
-};
-const Imgsunportfolio = () => {
-  return <div className="sun"></div>;
-};
-
-const Imgcityportfolio = () => {
-  return <div className="city"></div>;
-};
-
 export const BodyPortfolio = () => {
   return (
     <div>
       <Photoblog />
-      {/* <Imgtwoportfolio /> */}
+
       <Skills />
-      {/* <Imgfiveportfolio />
-      <Imgfourportfolio />
-      <Imgeightportfolio />
-      <Imgtenportfolio />
-      <Imgsixportfolio />
-      <Imgsevenportfolio />
-      <Imgeightportfolio />
-      <Imgnineportfolio /> */}
+
       <Network />
-      <Imgsunportfolio />
-      <Imgcityportfolio />
-      {/* <Imgportfolio /> */}
     </div>
   );
 };

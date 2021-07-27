@@ -1,5 +1,4 @@
 import React from "react";
-import { Content } from "./components/Content";
 import { BodyPortfolio } from "./components/Portfolio";
 import { Toggle } from "./components/Toggle";
 import { useDarkMode } from "./styles/useDarkMode";
@@ -20,7 +19,6 @@ function App() {
       <Container>
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <Content />
         <BodyPortfolio />
       </Container>
     </ThemeProvider>
